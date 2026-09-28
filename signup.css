@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #faf8f5;
+    background-image: radial-gradient(circle at 10% 20%, rgba(255, 165, 0, 0.05) 0%, transparent 50%);
+    padding: 20px;
+}
+
+.signup-container {
+    width: 100%;
+    max-width: 440px;
+    padding: 20px;
+}
+
+.signup-card {
+    background: #fffcf9;
+    border-radius: 24px;
+    padding: 40px 32px;
+    box-shadow: 0 20px 60px rgba(255, 165, 0, 0.12), 0 8px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 165, 0, 0.08);
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.brand-icon {
+    font-size: 32px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.brand h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #e67a00;
+    letter-spacing: -0.5px;
+}
+
+.brand .tagline {
+    color: #b8860b;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.signup-card h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2d1f00;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    color: #8a7a6a;
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-left: 4px solid #dc3545;
+}
+
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-left: 4px solid #28a745;
+}
+
+.login-link {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a3a2a;
+}
+
+.input-group input {
+    padding: 12px 16px;
+    border: 2px solid #f0e8e0;
+    border-radius: 12px;
+    font-size: 15px;
+    background: #fefcf9;
+    transition: all 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #ff8c00;
+    box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.08);
+}
+
+.role-selector {
+    background: #fdfaf7;
+    padding: 16px 18px;
+    border-radius: 14px;
+    border: 2px solid #f5ede6;
+}
+
+.role-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a3a2a;
+    margin-bottom: 10px;
+}
+
+.role-options {
+    display: flex;
+    gap: 12px;
+}
+
+.role-option {
+    flex: 1;
+    cursor: pointer;
+}
+
+.role-option input {
+    display: none;
+}
+
+.role-badge {
+    display: block;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.role-badge.seller {
+    background: #fff0e0;
+    color: #cc6600;
+}
+
+.role-badge.buyer {
+    background: #f5ede6;
+    color: #7a6a5a;
+}
+
+.role-option input:checked + .role-badge.seller {
+    background: #ff8c00;
+    color: #fff;
+    border-color: #ff8c00;
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}
+
+.role-option input:checked + .role-badge.buyer {
+    background: #e67a00;
+    color: #fff;
+    border-color: #e67a00;
+    box-shadow: 0 4px 12px rgba(230, 122, 0, 0.3);
+}
+
+#nameFields {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.signup-btn {
+    padding: 14px;
+    background: #ff8c00;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 4px;
+}
+
+.signup-btn:hover {
+    background: #e67a00;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.25);
+}
+
+.signup-btn:active {
+    transform: translateY(15);
+}
+
+.signup-footer {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #b0a090;
+}
+
+.signup-footer a {
+    color: #ff8c00;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-footer a:hover {
+    text-decoration: underline;
+}
+
+.signup-footer p {
+    margin: 4px 0;
+}
+
+.signup-footer .hint {
+    margin-top: 8px;
+    color: #cc6600;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .signup-card {
+        padding: 30px 20px;
+    }
+    
+    .role-options {
+        flex-direction: column;
+    }
+}
+
+#sellerNameField {
+    display: block;
+}
+
+#buyerNameField {
+    display: none;
+}
+.home-btn {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #fffcf9;
+    color: #e67a00;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    border: 2px solid #f5ede6;
+    transition: all 0.2s ease;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.06);
+}
+
+.home-btn:hover {
+    background: #ff8c00;
+    color: #fff;
+    border-color: #ff8c00;
+    transform: scale(1.2);
+    box-shadow: 0 6px 16px rgba(255, 140, 0, 0.25);
+}
+
+.home-btn .home-icon {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.home-btn .home-text {
+    line-height: 1;
+}
+
+@media (max-width: 480px) {
+    .home-btn {
+        top: 16px;
+        left: 16px;
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+}
